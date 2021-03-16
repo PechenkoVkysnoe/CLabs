@@ -10,5 +10,5 @@ runTest:
 	./test
 
 clean:
-	rm -rf clabs
+	rm -rf *.exe
 	
