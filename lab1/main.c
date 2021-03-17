@@ -12,17 +12,17 @@ double get() {
     }
     return value;
 }
-int convert_rub(double value){
-    return (int) ((value * 100 + 0.5000000000001) / 100);
+int convert_rub(double value) {
+    return (int)((value * 100 + 0.5000000000001) / 100);
 }
-int convert_pen(double value,int rub){
-    return (int) (100 * (value - rub) + 0.5);
+int convert_pen(double value, int rub) {
+    return (int)(100 * (value - rub) + 0.5);
 }
 int main() {
     double value;
     value = get();
     int rub = convert_rub(value);
-    int pen = convert_pen(value,rub);
+    int pen = convert_pen(value, rub);
     printf("%d rub. %d pen.\n", rub, pen);
     getchar();
     return 0;

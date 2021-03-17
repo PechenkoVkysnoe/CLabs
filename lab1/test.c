@@ -1,7 +1,7 @@
 #include <assert.h>
 #include "main.h"
 
-void test(){
+void test() {
     assert(convert_rub(2.0) == 2);
     assert(convert_rub(2.99) == 2);
     assert(convert_rub(2.15645645245245) == 2);
@@ -11,7 +11,7 @@ void test(){
     assert(convert_pen(2.0009, 2) == 0);
 }
 #undef main
-int main(){
+int main() {
     test();
     return 0;
 }

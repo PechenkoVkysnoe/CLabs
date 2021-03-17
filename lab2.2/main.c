@@ -15,7 +15,7 @@ int calc(double x, double e) {
 double get_angle() {
     double value;
     char ch;
-    while (scanf("%lf%c", &value, &ch) != 2 || ch != '\n'||value<-1.57||value>1.57) {
+    while (scanf("%lf%c", &value, &ch) != 2 || ch != '\n' || value < -1.57 || value>1.57) {
         printf("Enter the correct angle, angle less PI/2, more -PI/2\n");
         while (getchar() != '\n') {
         }
@@ -25,7 +25,7 @@ double get_angle() {
 double get_error() {
     double value;
     char ch;
-    while (scanf("%lf%c", &value, &ch) != 2 || ch != '\n'||value<=0) {
+    while (scanf("%lf%c", &value, &ch) != 2 || ch != '\n' || value <= 0) {
         printf("Enter the correct error, error more 0\n");
         while (getchar() != '\n') {
         }

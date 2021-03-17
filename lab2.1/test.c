@@ -2,7 +2,7 @@
 #include <math.h>
 #include "main.h"
 
-void test(){
+void test() {
     assert(to_km(1000000) == 1);
     assert(to_m(1000000) == 1000);
     assert(to_c(1000000) == 100000);
@@ -16,7 +16,7 @@ void test(){
     assert(fabs(to_verst(1000000) - 0.937383) < 0.00001);
 }
 #undef main
-int main(){
+int main() {
     test();
     return 0;
 }

@@ -9,37 +9,37 @@ int get(int a) {
     }
     return value;
 }
-double to_km(double value){
+double to_km(double value) {
     return value / 1000000;
 }
-double to_m(double value){
+double to_m(double value) {
     return value / 1000;
 }
-double to_c(double value){
+double to_c(double value) {
     return value / 10;
 }
-double to_verst(double value){
+double to_verst(double value) {
     return value / 1066800;
 }
-double to_s(double value){
+double to_s(double value) {
     return value / 2133.6;
 }
-double to_a(double value){
+double to_a(double value) {
     return value / 711.2;
 }
-double to_versh(double value){
+double to_versh(double value) {
     return value / 44.45;
 }
-double to_miles(double value){
+double to_miles(double value) {
     return value / 1609344;
 }
-double to_y(double value){
+double to_y(double value) {
     return value / 914.4;
 }
-double to_f(double value){
+double to_f(double value) {
     return value / 304.8;
 }
-double to_i(double value){
+double to_i(double value) {
     return value / 25.4;
 }
 int main() {
