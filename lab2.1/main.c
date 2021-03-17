@@ -10,41 +10,41 @@ int get(int a) {
     return value;
 }
 double to_km(double value){
-    return value/ 1000000;
+    return value / 1000000;
 }
 double to_m(double value){
-    return value/ 1000;
+    return value / 1000;
 }
 double to_c(double value){
-    return value/ 10;
+    return value / 10;
 }
 double to_verst(double value){
-    return value/ 1066800;
+    return value / 1066800;
 }
 double to_s(double value){
-    return value/ 2133.6;
+    return value / 2133.6;
 }
 double to_a(double value){
-    return value/ 711.2;
+    return value / 711.2;
 }
 double to_versh(double value){
-    return value/ 44.45;
+    return value / 44.45;
 }
 double to_miles(double value){
-    return value/ 1609344;
+    return value / 1609344;
 }
 double to_y(double value){
-    return value/ 914.4;
+    return value / 914.4;
 }
 double to_f(double value){
-    return value/ 304.8;
+    return value / 304.8;
 }
 double to_i(double value){
     return value / 25.4;
 }
 int main() {
     int value;
-    double length=0;
+    double length = 0;
     double tmp;
     while (1) {
         printf("Enter 1 to input length(kilometers, meters, centimeters,millimeters)\n"
@@ -65,17 +65,17 @@ int main() {
                     case 1:
                         printf("Enter length\n");
                         scanf("%lf", &tmp);
-                        length = tmp*1000000;
+                        length = tmp * 1000000;
                         break;
                     case 2:
                         printf("Enter length\n");
                         scanf("%lf", &tmp);
-                        length = tmp*1000;
+                        length = tmp * 1000;
                         break;
                     case 3:
                         printf("Enter length\n");
                         scanf("%lf", &tmp);
-                        length = tmp*10;
+                        length = tmp * 10;
                         break;
                     case 4:
                         printf("Enter length\n");
@@ -95,13 +95,13 @@ int main() {
                         printf("Length in versts is: %lf\n", to_verst(length));
                         break;
                     case 2:
-                        printf("Length in arshins is: %lf\n", to_a(length) );
+                        printf("Length in arshins is: %lf\n", to_a(length));
                         break;
                     case 3:
-                        printf("Length in sazhens is: %lf\n",to_s(length) );
+                        printf("Length in sazhens is: %lf\n", to_s(length));
                         break;
                     case 4:
-                        printf("Length in vershoks is: %lf\n",to_versh(length));
+                        printf("Length in vershoks is: %lf\n", to_versh(length));
                         break;
                 }
                 break;
@@ -113,13 +113,13 @@ int main() {
                 value = get(4);
                 switch (value) {
                     case 1:
-                        printf("Length in miles is: %lf\n", to_miles(length) );
+                        printf("Length in miles is: %lf\n", to_miles(length));
                         break;
                     case 2:
-                        printf("Length in yards is: %lf\n", to_y(length) );
+                        printf("Length in yards is: %lf\n", to_y(length));
                         break;
                     case 3:
-                        printf("Length in feet is: %lf\n", to_f(length) );
+                        printf("Length in feet is: %lf\n", to_f(length));
                         break;
                     case 4:
                         printf("Length in inches is: %lf\n", to_i(length));
