@@ -1,0 +1,1 @@
+int FullCost(struct Medicines *med, int i);
