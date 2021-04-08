@@ -5,8 +5,8 @@
 #include <math.h>
 #include <malloc.h>
 
-int FullCost(struct Medicines *med, int i) {
-    int k = 0,j=0,num=0,cost=0,fullCost=0,tr=1;
+int FullCost(struct Medicines* med, int i) {
+    int k = 0, j = 0, num = 0, cost = 0, fullCost = 0, tr = 1;
     while (med[i].cost[k] != '\0') {
         k++;
     }
@@ -17,21 +17,21 @@ int FullCost(struct Medicines *med, int i) {
     j--;
     for (j; j >= 0; j--) {
         num += tr * ((int)(med[i].num[j] - '0'));
-        tr*=10;
+        tr *= 10;
     }
-    for (tr=1,k; k >= 0; k--) {
+    for (tr = 1, k; k >= 0; k--) {
         cost += tr * ((int)(med[i].cost[k] - '0'));
-        tr*=10;
+        tr *= 10;
     }
-    return fullCost=cost*num;
+    return fullCost = cost * num;
 }
 
 int main()
 {
-    struct Medicines *med = NULL;
+    struct Medicines* med = NULL;
     char buff[512];
-    int i = 0,j=0,k=0,count=0,fullCost=0,cost=0,num=0,tr=0;
-    FILE *file = fopen("input.txt", "r");
+    int i = 0, j = 0, k = 0, count = 0, fullCost = 0, cost = 0, num = 0, tr = 0;
+    FILE* file = fopen("input.txt", "r");
     if (file == NULL) {
         printf("Input file is invalid");
         exit(-1);
@@ -66,14 +66,14 @@ int main()
         for (k = 0, i; buff[i] != ' ' && buff[i] != '\n' && buff[i] != '\0'; i++, k++) {
             med[j].cost[k] = buff[i];
         }
-        med[j].cost[k] = '\0' ;
+        med[j].cost[k] = '\0';
         j++;
         i = 0;
     }
     fclose(file);
     int date = 0;
     for (i = 0; i < count; i++) {
-        date = fullCost =num=cost= 0;
+        date = fullCost = num = cost = 0;
         for (tr = 0, j = 7; j >= 6; j--, tr++) {
             date += (int)pow(10, tr) * (((int)med[i].date[j]) - 48);
         }
@@ -100,6 +100,6 @@ int main()
         }
     }
     free(med);
-    getchar( );
+    getchar();
     return 0;
 }
