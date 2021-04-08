@@ -41,9 +41,9 @@ int main()
         count++;
     }
     med = (struct Medicines*)calloc(count, sizeof(struct Medicines));
-    if (!med) {
-        printf("Allocation failure.");
-        exit(0);
+    if (med == NULL) {
+        printf("Error: can't allocate memory");
+        return 0;
     }
     fseek(file, 0, 0);
     while (j < count) {
