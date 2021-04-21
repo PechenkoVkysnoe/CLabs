@@ -16,6 +16,9 @@ jobs:
     - name: compiling and testing
       run: |
         for d in */ ; do
+        echo "---------------------"
+        echo $d
+        echo "---------------------"
         cd "$d"
         make
         cd ..
