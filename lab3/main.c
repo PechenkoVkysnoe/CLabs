@@ -47,7 +47,7 @@ void calculation(int **array, int n)
 		}
 	}
 }
-int test(int x, int y, int** array)
+int testing(int x, int y, int** array)
 {
     return array[x][y];
 }
