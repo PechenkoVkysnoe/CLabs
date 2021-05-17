@@ -1,1 +1,0 @@
-int StoI(int n, char str[80]);
