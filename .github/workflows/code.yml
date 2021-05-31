@@ -8,14 +8,12 @@ jobs:
         uses: actions/checkout@master
       - name: Test
         run: |
-          cd Lab7
-          g++ -std=c++11 -ftest-coverage -fprofile-arcs -O0 -o test tests.cpp employer.cpp applicant.cpp database_helper.cpp
+          cd lab7
+          g++ -std=c++11 -ftest-coverage -fprofile-arcs -O0 -o test main_test.cpp 
           ./test
-          gcov -abcfu applicant.cpp employer.cpp database_helper.cpp
+          gcov -abcfu main_test.cpp
       - name: Upload
         uses: codecov/codecov-action@v1
         with:
           files: |
-              ./Lab7/employer.cpp.gcov
-              ./Lab7/applicant.cpp.gcov
-              ./Lab7/database_helper.cpp.gcov
+              ./lab7/main_test.cpp.gcov
