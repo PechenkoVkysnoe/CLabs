@@ -1,0 +1,19 @@
+name: Codecov
+on: [push, pull_request]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch
+        uses: actions/checkout@master
+      - name: Test
+        run: |
+          cd lab7
+          g++ -std=c++11 -ftest-coverage -fprofile-arcs -O0 -o test main_test.cpp 
+          ./test
+          gcov -abcfu main_test.cpp
+      - name: Upload
+        uses: codecov/codecov-action@v1
+        with:
+          files: |
+              ./lab7/main_test.cpp.gcov
