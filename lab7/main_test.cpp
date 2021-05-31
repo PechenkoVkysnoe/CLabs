@@ -74,6 +74,10 @@ void test() {
     Vitebsk.monuments.push_back("Monument to the Children of War, Uritskogo street 11");
     sity.push_back(Vitebsk);
     nameOf(Grodno);
+    hotel(Grodno.hotels);
+    relaxation(Grodno.relaxations);
+    monument(Grodno.monuments);
+    functions(Grodno);
     
 }
 
