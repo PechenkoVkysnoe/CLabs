@@ -1,3 +1,7 @@
+#include <vector>
+#include <algorithm>
+#include <string>
+
 struct Sity
 {
     string name;
