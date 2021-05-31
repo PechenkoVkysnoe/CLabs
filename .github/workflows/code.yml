@@ -10,8 +10,9 @@ jobs:
         run: |
           cd lab7
           g++ -std=c++11 -lm -ftest-coverage -fprofile-arcs -O0 -o test main_test.cpp tourist.cpp
-          ./test
-          gcov -abcfu tourist.cpp
+          echo "1 2 3 0" > in.txt
+          ./test < in.txt
+          gcov -abcfu tourist.cpp 
       - name: Upload
         uses: codecov/codecov-action@v1
         with:
