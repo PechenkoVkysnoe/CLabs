@@ -9,7 +9,7 @@ jobs:
       - name: Test
         run: |
           cd lab7
-          g++ -std=c++11 -ftest-coverage -fprofile-arcs -O0 -o test main_test.cpp 
+          g++ -std=c++11 -ftest-coverage -fprofile-arcs -O0 -o -lm test main_test.cpp 
           ./test
           gcov -abcfu main_test.cpp
       - name: Upload
