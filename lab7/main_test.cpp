@@ -1,5 +1,10 @@
 #include <assert.h>
+#include <vector>
+#include <algorithm>
+#include <string>
 #include "tourist.h"
+
+using namespace std;
 
 void test() {
     vector <Sity> sity;
