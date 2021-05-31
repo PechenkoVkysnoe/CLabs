@@ -77,7 +77,7 @@ void test() {
     hotel(Grodno.hotels);
     relaxation(Grodno.relaxations);
     monument(Grodno.monuments);
-    //functions(Grodno);
+    functions(Grodno);
     
 }
 
